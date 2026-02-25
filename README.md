@@ -1,101 +1,101 @@
 # MinIO Console
 
-A modern web-based MinIO management console for managing buckets and files with a clean, intuitive UI.
+一个现代化的 MinIO 管理控制台，提供简洁直观的界面来管理存储桶和文件。
 
-![Preview](https://via.placeholder.com/800x450?text=MinIO+Console+Preview)
+![预览图](https://via.placeholder.com/800x450?text=MinIO+Console+Preview)
 
-## ✨ Features
+## ✨ 功能特性
 
-- **Bucket Management** - Create, delete, and manage storage buckets
-- **Access Control** - Set bucket policies (private, public-read, public-read-write)
-- **File Browser** - Browse, upload, download, and delete objects
-- **Image Preview** - Preview images directly in the browser
-- **Connection Config** - Easy configuration for MinIO server credentials
+- **存储桶管理** - 创建、删除和管理存储桶
+- **访问控制** - 设置存储桶权限（私有、公共读、公共读写）
+- **文件浏览器** - 浏览、上传、下载和删除对象
+- **图片预览** -直接在浏览器中预览图片
+- **连接配置** - 轻松配置 MinIO 服务器凭据
 
-## 🛠️ Tech Stack
+## 🛠️ 技术栈
 
 - React 19
 - Vite 7
 - TypeScript
-- Lucide React (icons)
+- Lucide React (图标)
 
-## 🚀 Quick Start
+## 🚀 快速开始
 
-### Prerequisites
+### 前置要求
 
 - Node.js 18+
-- MinIO Server
+- MinIO 服务器
 
-### Installation
+### 安装
 
 ```bash
-# Clone the repository
+# 克隆仓库
 git clone https://github.com/Pizimous/minio-console.git
 cd minio-console
 
-# Install dependencies
+# 安装依赖
 npm install
 
-# Start development server
+# 启动开发服务器
 npm run dev
 ```
 
-### Build for Production
+### 生产环境构建
 
 ```bash
 npm run build
 ```
 
-## 🐳 Docker Deployment
+## 🐳 Docker 部署
 
 ```bash
-# Build the image
+# 构建镜像
 docker build -t minio-console .
 
-# Run the container
+# 运行容器
 docker run -d -p 3000:80 minio-console
 ```
 
-Or use docker-compose:
+或使用 docker-compose：
 
 ```bash
 docker-compose up -d
 ```
 
-## 📦 Project Structure
+## 📦 项目结构
 
 ```
 minio-console/
 ├── src/
 │   ├── components/
-│   │   ├── BucketManager.jsx    # Bucket CRUD & permissions
-│   │   ├── ConnectionConfig.jsx # MinIO connection settings
-│   │   ├── FileBrowser.jsx      # File/folder browser
-│   │   └── ImagePreview.jsx     # Image preview component
+│   │   ├── BucketManager.jsx    # 存储桶 CRUD 和权限管理
+│   │   ├── ConnectionConfig.jsx # MinIO 连接配置
+│   │   ├── FileBrowser.jsx      # 文件/文件夹浏览器
+│   │   └── ImagePreview.jsx     # 图片预览组件
 │   ├── services/
-│   │   └── api.js               # MinIO API client
-│   ├── App.jsx                  # Main application
-│   └── main.jsx                 # Entry point
+│   │   └── api.js               # MinIO API 客户端
+│   ├── App.jsx                  # 主应用
+│   └── main.jsx                 # 入口文件
 ├── server/
-│   └── server.js                # Simple proxy server
+│   └── server.js                # 简单的代理服务器
 ├── public/
 ├── Dockerfile
 ├── docker-compose.yml
 └── package.json
 ```
 
-## 🔧 Configuration
+## 🔧 配置
 
-The console connects to your MinIO server via a simple proxy server. Configure the connection in the web UI:
+控制台通过简单的代理服务器连接到你的 MinIO 服务器。在网页界面中配置连接：
 
-- **Endpoint**: Your MinIO server address (e.g., localhost:9000)
-- **Access Key**: MinIO access key
-- **Secret Key**: MinIO secret key
+- **Endpoint**: MinIO 服务器地址（如 localhost:9000）
+- **Access Key**: MinIO 访问密钥
+- **Secret Key**: MinIO 秘密密钥
 
-## 📄 License
+## 📄 开源许可
 
-MIT License - see [LICENSE](LICENSE) for details.
+MIT License - 详见 [LICENSE](LICENSE)。
 
 ---
 
-Built with ❤️
+用 ❤️ 构建
