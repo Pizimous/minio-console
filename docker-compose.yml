@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  minio-console:
+    build: .
+    container_name: minio-console
+    ports:
+      - "3001:3001"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
